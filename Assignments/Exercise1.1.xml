@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Library>
+    <Book category="Technical">
+        <ISBN>978-1119787600</ISBN>
+        <Title>Python All-in-One For Dummies</Title>
+        <Author>John C. Shovic</Author>
+    </Book>
+    <Book category="Technical">
+        <ISBN>979-8679556911</ISBN>
+        <Title>XML JSON in 8 Hours</Title>
+        <Author>Ray Yao</Author>
+    </Book>
+    <Book category="Cookery">
+        <ISBN>978-1529325430</ISBN>
+        <Title >Gordon Ramsay Quick and Delicious: 100 recipes in 30 minutes or less</Title>
+        <Author>Gordon Ramsay</Author>
+    </Book>
+     <Book category="Cookery">
+        <ISBN>978-1785947902</ISBN>
+        <Title>Cook and Share: 120 Delicious New Fuss-free Recipes</Title>
+        <Author>Mary Berry</Author>
+    </Book>
+</Library>
+
