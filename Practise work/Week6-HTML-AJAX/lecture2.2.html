@@ -1,0 +1,70 @@
+<html>
+
+    <head> 
+        <title>2.2</title>
+    </head>
+    <body>
+        <div id="div1" style="background-color: royalblue; display: block;">
+            <br/>
+            blaaaaaaaaaaaah <br/>
+            <button onclick="showDiv2()">Show div 2</button> <br/>
+        </div>
+        <div id="div2" style="background-color:grey; display: none;">
+            <br/>
+            bleeeeeeeeeeeeeeeeeeeeeh <br/>
+            <button onclick="showDiv1()">Show div 1</button> <br/>
+        </div>
+        <br/><br/><br/><br/>
+
+        <input type="number" onchange="checkNumebr(this)"/>
+        <div id="output">
+            output here
+        </div>
+
+
+        <div id="outForLoop">
+
+            out here
+        </div>
+
+
+        <script>
+            var book = {}
+            book.title = "Chamber secret"
+            book.author = "JK"
+            book.isbn = "123"
+            console.log("book is "+JSON.stringify(book))
+
+            function showDiv2(){
+                document.getElementById("div1").style.display = "none";
+                document.getElementById("div2").style.display = "block";
+            }
+            function showDiv1(){
+                document.getElementById("div1").style.display = "block";
+                document.getElementById("div2").style.display = "none";
+            }
+
+            function checkNumebr(inputElement){
+                var value = inputElement.value
+                if(value<10){
+                    document.getElementById("output").innerText="too low"
+                } else if(value > 10 ){
+                    document.getElementById("output").innerText="too high"
+                } else{ document.getElementById("output").innerText="Just right"}
+            }
+
+            for (var i = 0;i<50;i++){
+                console.log(i)
+            }
+
+            var names=["Joe","mary","mike"]
+            var output2 = ""
+            for (name of names){
+                output2 += name + '<br/> '
+
+            }
+            document.getElementById("outForLoop").innerHTML = output2
+        </script>
+    </body>
+
+</html>
