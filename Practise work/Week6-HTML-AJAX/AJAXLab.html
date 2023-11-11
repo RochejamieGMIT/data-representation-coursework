@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>TEST GET ALL</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+
+    </body>
+    <script>
+        function getAll(callback){
+        $.ajax({
+            "url": " http://andrewbeatty1.pythonanywhere.com/books",
+            "method":"GET",
+            "data":"",
+            "dataType": "JSON",
+            "success":function(result){
+                //console.log(result);
+                callback(result)
+            
+            },
+            "error":function(xhr,status,error){
+                console.log("error: "+status+" msg:"+error);
+            }
+            });
+            }
+            function processGetAll(result){
+                console.log("in process")
+                console.log(result)
+            }
+
+
+            getAll(processGetAll) 
+
+            function createBook(book, callback){
+                //console.log(JSON.stringify(book));
+                $.ajax({
+                    "url": "http://andrewbeatty1.pythonanywhere.com/books",
+                    "method":"POST",
+                    "data":JSON.stringify(book),
+                    "dataType": "JSON",
+                    contentType: "application/json; charset=utf-8",
+                    "success":function(result){
+                    console.log(result);
+                    //callback(result) 
+                    },
+                    "error":function(xhr,status,error){
+                    console.log("error: "+status+" msg:"+error);
+                    }
+                });
+
+                function processCreateresponse(result){
+                    console.log(result)
+                    }
+                    book = {"Title":"javascript","Author":"andrew","Price":12} 
+                    createBook(book,processCreateresponse)
+                }
+
+                function updateBook(book, callback){
+                    //console.log(JSON.stringify(book));
+                    $.ajax({
+                    "url": "http://andrewbeatty1.pythonanywhere.com/books/"+encodeURI(book.id),
+                    "method":"PUT",
+                    "data":JSON.stringify(book),
+                    "dataType": "JSON",
+                    contentType: "application/json; charset=utf-8",
+                    "success":function(result){
+                    console.log(result);
+                    //callback(result) 
+                    },
+                    "error":function(xhr,status,error){
+                    console.log("error: "+status+" msg:"+error);
+                    }
+                    });
+                    }
+
+                function updateBook(book, callback){
+                    //console.log(JSON.stringify(book));
+                    $.ajax({
+                    "url": "http://andrewbeatty1.pythonanywhere.com/books/"+encodeURI(book.id),
+                    "method":"PUT",
+                    "data":JSON.stringify(book),
+                    "dataType": "JSON",
+                    contentType: "application/json; charset=utf-8",
+                    "success":function(result){
+                    console.log(result);
+                    //callback(result) 
+                    },
+                    "error":function(xhr,status,error){
+                    console.log("error: "+status+" msg:"+error);
+                    }
+                    });
+                    }
+                function updateBook(book, callback){
+                    //console.log(JSON.stringify(book));
+                    $.ajax({
+                    "url": "http://andrewbeatty1.pythonanywhere.com/books/"+encodeURI(book.id),
+                    "method":"PUT",
+                    "data":JSON.stringify(book),
+                    "dataType": "JSON",
+                    contentType: "application/json; charset=utf-8",
+                    "success":function(result){
+                    console.log(result);
+                    //callback(result) 
+                    },
+                    "error":function(xhr,status,error){
+                    console.log("error: "+status+" msg:"+error);
+                    }
+                    });
+                    }
+
+
+    </script>
+
+
+
+</html>
