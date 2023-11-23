@@ -9,13 +9,13 @@ db = mysql.connector.connect(
 
 mycursor = db.cursor()
 
-sql = "insert into student (name,age) values (%s,%s)"
-values = ("Jamie",28)
+sql = "update student set name= %s, age= %s where id =%s"
+values = ("Clod",28,2)
 # Example: Fetching data from a table
 #sql = "SELECT * FROM test"
 mycursor.execute(sql,values)
 db.commit()
-print("1 record inserted, ID: ", mycursor.lastrowid)
+print("Updated Record")
 
 mycursor.close()
 db.close()
